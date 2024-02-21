@@ -16,16 +16,16 @@
 
             <div class="lg:hidden block">
               <div
-                class="relative 2xl:w-full lg:w-[430px] flex sm:justify-end justify-center lg:h-0 md:h-96 h-60 md:mt-28 md:mb-20 my-10">
+                class="relative 2xl:w-full lg:w-[430px] flex sm:justify-end justify-center lg:h-0 md:h-96 h-60 md:mt-36 md:mb-20 my-10">
                 <img
-                  class="absolute z-[-10] 2xl:w-[300px] 2xl:h-[300px] md:w-[250px] md:h-[250px] w-[150px] h-[150px] sm:border-[20px] top-0 left-10 md:left-36 md:top-[-50px] border-[15px] rounded-tl-full rounded-tr-full border-pink-500"
+                  class="absolute z-[-10] 2xl:w-[300px] 2xl:h-[300px] md:w-[250px] md:h-[250px] w-[150px] h-[150px] top-[-20px] left-12 md:left-40 md:top-[-80px] rounded-3xl"
                   src="https://img.freepik.com/free-photo/book-composition-with-open-book_23-2147690555.jpg" alt="">
                 <img
-                  class="absolute 2xl:w-[300px] 2xl:h-[300px] md:w-[250px] md:h-[250px] w-[150px] h-[150px] sm:rounded-[60px] rounded-[40px] md:right-36 right-14 top-14 sm:border-[20px] border-[15px] border-lime-400"
+                  class="absolute 2xl:w-[300px] 2xl:h-[300px] md:w-[250px] md:h-[250px] w-[150px] h-[150px] md:right-32 right-10 top-14 rounded-3xl"
                   src="https://images.theconversation.com/files/45159/original/rptgtpxd-1396254731.jpg?ixlib=rb-1.1.0&q=45&auto=format&w=754&fit=clip"
                   alt="">
                 <img
-                  class="absolute 2xl:w-[300px] 2xl:h-[300px] md:w-[250px] md:h-[250px] w-[150px] h-[150px] rounded-full sm:border-[20px] md:left-36 md:top-36 left-10 top-28 border-[15px] border-blue-400"
+                  class="absolute 2xl:w-[300px] 2xl:h-[300px] md:w-[250px] md:h-[250px] w-[150px] h-[150px]  md:left-32 md:top-36 left-8 top-28 rounded-3xl"
                   src="https://st2.depositphotos.com/2769299/7314/i/450/depositphotos_73146775-stock-photo-a-stack-of-books-on.jpg"
                   alt="">
               </div>
@@ -65,14 +65,14 @@
           <div class="lg:block hidden">
             <div class="relative 2xl:w-full lg:w-[430px] flex justify-end">
               <img
-                class="absolute z-[-10] 2xl:w-[300px] 2xl:h-[300px] lg:w-[250px] lg:h-[250px] 2xl:top-[-150px] 2xl:left-[-220px] top-[-130px] left-0 border-[20px] rounded-tl-full rounded-tr-full border-pink-500"
+                class="absolute z-[-10] 2xl:w-[300px] 2xl:h-[300px] lg:w-[250px] lg:h-[250px] 2xl:top-[-180px] 2xl:left-[-220px] top-[-150px] left-0 rounded-3xl"
                 src="https://img.freepik.com/free-photo/book-composition-with-open-book_23-2147690555.jpg" alt="">
               <img
-                class="2xl:w-[300px] 2xl:h-[300px] lg:w-[250px] lg:h-[250px] rounded-[60px] border-[20px] border-lime-400"
+                class="2xl:w-[300px] 2xl:h-[300px] lg:w-[250px] lg:h-[250px] rounded-3xl"
                 src="https://images.theconversation.com/files/45159/original/rptgtpxd-1396254731.jpg?ixlib=rb-1.1.0&q=45&auto=format&w=754&fit=clip"
                 alt="">
               <img
-                class="absolute 2xl:w-[300px] 2xl:h-[300px] lg:w-[250px] lg:h-[250px] 2xl:top-20 2xl:left-[-220px] top-16 left-0 rounded-full border-[20px] border-blue-400"
+                class="absolute 2xl:w-[300px] 2xl:h-[300px] lg:w-[250px] lg:h-[250px] 2xl:top-20 2xl:left-[-260px] top-16 left-[-40px] rounded-3xl"
                 src="https://st2.depositphotos.com/2769299/7314/i/450/depositphotos_73146775-stock-photo-a-stack-of-books-on.jpg"
                 alt="">
             </div>
