@@ -232,14 +232,33 @@
 
     <section class="map">
       <div class=" container mx-auto px-5">
+        <div class="map__top">
+          <h1>
+            Bizning manzillar 
+          </h1>
+          <div class="map__title">
+            <h2>
+              Filialni tanlang 
+            </h2>
+            <select name="" id="">
+              <option value="">Chilonzor</option>
+              <option value="">Chilonzor</option>
+              <option value="">Chilonzor</option>
+            </select>
+          </div>
+        </div>
         <div class="map__wrapper">
           <div class="map__register">
             <h1>
               Bepul konsultatsiya
             </h1>
             <p>
+<<<<<<< HEAD
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis nesciunt sapiente corrupti pariatur
               voluptas unde inventore dolorem accusantium dolor deserunt.
+=======
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iure aliquid eum aspernatur atque quia. Deserunt, molestias, numquam itaque magni velit dolor impedit asperiores debitis veritatis qui deleniti, esse harum corrupti?
+>>>>>>> c6a16274d10802bc942aac27aaa77dbcc946ae5c
             </p>
             <form action="">
               <input type="text" placeholder="Ismingiz">
@@ -249,8 +268,42 @@
               </button>
             </form>
           </div>
+          <h1 class="map__mobile">
+            Bizning manzil
+          </h1>
           <div class="map__center">
+            <h2>
+              Guliston
+            </h2>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3033.0365145885467!2d68.79288094514469!3d40.51868399577471!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38b20744f37988af%3A0x5fe5538855c9a835!2z0JzQvtC70L7QtNC10LbQvdGL0Lkg0YbQtdC90YLRgA!5e0!3m2!1sru!2s!4v1708511491718!5m2!1sru!2s"  style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <h3>
+              Chilonzor tumani Qatortol kochasi 1 uy 
+            </h3>
+            <div class="line">
 
+            </div>
+            <span>
+              Mo`ljal
+            </span>
+            <h3>
+                Rayhon Milliy tamomlar  
+            </h3>
+            <div class="line ">
+
+            </div>
+            <span>
+              Ish vaqti 
+            </span>
+            <h3>
+              09:00 - 18:00
+            </h3>
+            <div class="line">
+
+            </div>
+            <span>
+              Telefon
+            </span>
+            <a href="!#">+998975556895</a>
           </div>
         </div>
       </div>
@@ -289,10 +342,40 @@ import Footer from '@/components/Footer.vue';
 
 .map {}
 
+<<<<<<< HEAD
 .map__register {
   padding: 15px;
-  background-color: #F9F7F3;
+=======
 }
+.map__top{
+  display: flex;
+  align-items: center ;
+  justify-content: space-between;
+  margin-bottom: 50px;
+}
+.map__top h1{
+  font-size: 50px;
+}
+.map__title{
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+.map__title select{
+  cursor: pointer;
+
+}
+.map__top h2{
+  font-size: 20px;
+
+}
+.map__register{
+  padding: 40px;
+>>>>>>> c6a16274d10802bc942aac27aaa77dbcc946ae5c
+  background-color: #F9F7F3;
+  border-radius: 30px;
+}
+<<<<<<< HEAD
 
 .map__register h1 {
   font-size: 40px;
@@ -302,15 +385,136 @@ import Footer from '@/components/Footer.vue';
   font-size: 18px;
   width: 500px;
   margin-bottom: 20px;
+=======
+.map__register h1{
+  font-size: 50px;
+}
+.map__register p{
+  font-size: 24px;
+  width: 900px;
+  margin-bottom: 40px;
+>>>>>>> c6a16274d10802bc942aac27aaa77dbcc946ae5c
 }
 
 .map__register form input {
   display: block;
-  width: 500px;
+  width: 600px;
   height: 60px;
   padding: 10px;
-  margin-bottom: 20px;
+  margin-bottom: 40px;
   border-radius: 5px;
   border: 2px solid #8f8f8f;
+}
+.map__register form button{
+  background-color: #3B82F6;
+  width: 600px;
+  height: 60px;
+  color: white;
+  border-radius: 10px;
+}
+.map__center{
+  padding: 20px 50px;
+  background-color: #0000000d;
+  border-radius: 30px ;
+}
+.map__wrapper{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+}
+.map__center h2{
+  font-size: 30px;
+  margin-bottom: 50px;
+  width: 250px;
+}
+.map__center iframe{
+  width: 100%;
+  margin-bottom: 15px;
+  border-radius: 30px;
+
+}
+.map__center h3{
+  font-size: 20px;
+  color: black;
+}
+.line{
+  height: 2px;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.478);
+  margin-top: 15px;
+  margin-bottom:15px ;
+}
+.map__center span{
+  color: rgba(0, 0, 0, 0.606);
+}
+.map__mobile{
+  display: none;
+  font-size: 50px;
+}
+@media(max-width:1536px){
+  .map__register p{
+    width: auto;
+  }
+}
+@media(max-width:1379px){
+  .map__center h2{
+    width: 190px;
+  }
+}
+@media(max-width:1060px){
+  .map__wrapper{
+    flex-direction: column;
+    gap: 50px;
+  }
+  .map__register{
+    text-align: center;
+  }
+  .map__register form input {
+    margin: 0 auto;
+    width: 100%;
+    margin-bottom: 40px;
+  }
+  .map__register form button{
+    width: 100%;
+  }
+}
+@media(max-width:770px){
+  .map__top h1{
+    font-size: 35px;
+  }
+}
+@media(max-width:600px){
+  .map__top {
+    flex-direction: column;
+    gap: 30px;
+  }
+}
+@media(max-width:425px){
+  .map__top {
+    display: none;
+  }
+  .map__mobile{
+    display: block;
+  }
+}
+@media(max-width:375px){
+  .map__register h1{
+    font-size:30px;
+  }
+  .map__register p {
+    font-size: 20px;
+  }
+  .map__mobile{
+    font-size:30px;
+  }
+  .map__center h2{
+    width: auto;
+  }
+}
+@media(max-width:289px){
+  .map__register h1{
+    font-size:20px;
+  }
 }
 </style>
