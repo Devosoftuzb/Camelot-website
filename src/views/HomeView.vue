@@ -178,6 +178,31 @@
         </div>
       </div>
     </section>
+
+    <section class="map">
+      <div class=" container mx-auto px-5">
+        <div class="map__wrapper">
+          <div class="map__register">
+            <h1>
+              Bepul konsultatsiya
+            </h1>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis nesciunt sapiente corrupti pariatur voluptas unde inventore dolorem accusantium dolor deserunt.
+            </p>
+            <form action="">
+              <input type="text" placeholder="Ismingiz">
+            <input type="text" name="" id="" placeholder="+998">
+            <button>
+              So`rov yuborish
+            </button>
+            </form>
+          </div>
+          <div class="map__center">
+
+          </div>
+        </div>
+      </div>
+    </section>
   </main>
   <Footer />
 </template>
@@ -208,5 +233,30 @@ import Footer from '@/components/Footer.vue';
   100% {
     transform: translate(calc(-100% + 1500px));
   }
+}
+
+.map{
+
+}
+.map__register{
+  padding: 15px;
+  background-color: #F9F7F3;
+}
+.map__register h1{
+  font-size: 40px;
+}
+.map__register p{
+  font-size: 18px;
+  width: 500px;
+  margin-bottom: 20px;
+}
+.map__register form input {
+  display: block;
+  width: 500px;
+  height: 60px;
+  padding: 10px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  border: 2px solid #8f8f8f;
 }
 </style>
