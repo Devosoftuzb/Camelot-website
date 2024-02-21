@@ -1,6 +1,6 @@
 <template>
     <header>
-        <div class="container mx-auto px-5px">
+        <div class="container mx-auto px-5 pb-5 border-b">
             <div class="header__wrapper">
                 <div class="header__grid">
                     <div class="header__logo">
@@ -9,7 +9,7 @@
                     </h1>
                     </div>
                     <div class="header__select">
-                        <select name="" id="">
+                        <select class="border-none p-2 outline-none cursor-pointer" name="" id="">
                             <option value="" disabled selected>Fanlar</option>                        
                             <option value="">Ingiliz tili</option>
                             <option value="">Russ tili</option>
@@ -63,13 +63,6 @@ header{
         padding: 10px;
         border-radius: 10px;
         cursor: pointer;
-    }
-    .header__select select{
-        border: 2px solid black;
-        border-radius: 10px;
-        cursor: pointer;
-        /* border: none; */
-        width: 70px ;
     }
     @media(max-width:600px){
         .header__grid{
