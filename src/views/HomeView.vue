@@ -15,20 +15,21 @@
             </p>
 
             <div class="lg:hidden block">
-            <div class="relative 2xl:w-full lg:w-[430px] flex sm:justify-end justify-center lg:h-0 md:h-96 h-60 md:mt-28 md:mb-20 my-10">
-              <img
-                class="absolute z-[-10] 2xl:w-[300px] 2xl:h-[300px] md:w-[250px] md:h-[250px] w-[150px] h-[150px] sm:border-[20px] top-0 left-10 md:left-36 md:top-[-50px] border-[15px] rounded-tl-full rounded-tr-full border-pink-500"
-                src="https://img.freepik.com/free-photo/book-composition-with-open-book_23-2147690555.jpg" alt="">
-              <img
-                class="absolute 2xl:w-[300px] 2xl:h-[300px] md:w-[250px] md:h-[250px] w-[150px] h-[150px] sm:rounded-[60px] rounded-[40px] md:right-36 right-14 top-14 sm:border-[20px] border-[15px] border-lime-400"
-                src="https://images.theconversation.com/files/45159/original/rptgtpxd-1396254731.jpg?ixlib=rb-1.1.0&q=45&auto=format&w=754&fit=clip"
-                alt="">
-              <img
-                class="absolute 2xl:w-[300px] 2xl:h-[300px] md:w-[250px] md:h-[250px] w-[150px] h-[150px] rounded-full sm:border-[20px] md:left-36 md:top-36 left-10 top-28 border-[15px] border-blue-400"
-                src="https://st2.depositphotos.com/2769299/7314/i/450/depositphotos_73146775-stock-photo-a-stack-of-books-on.jpg"
-                alt="">
+              <div
+                class="relative 2xl:w-full lg:w-[430px] flex sm:justify-end justify-center lg:h-0 md:h-96 h-60 md:mt-28 md:mb-20 my-10">
+                <img
+                  class="absolute z-[-10] 2xl:w-[300px] 2xl:h-[300px] md:w-[250px] md:h-[250px] w-[150px] h-[150px] sm:border-[20px] top-0 left-10 md:left-36 md:top-[-50px] border-[15px] rounded-tl-full rounded-tr-full border-pink-500"
+                  src="https://img.freepik.com/free-photo/book-composition-with-open-book_23-2147690555.jpg" alt="">
+                <img
+                  class="absolute 2xl:w-[300px] 2xl:h-[300px] md:w-[250px] md:h-[250px] w-[150px] h-[150px] sm:rounded-[60px] rounded-[40px] md:right-36 right-14 top-14 sm:border-[20px] border-[15px] border-lime-400"
+                  src="https://images.theconversation.com/files/45159/original/rptgtpxd-1396254731.jpg?ixlib=rb-1.1.0&q=45&auto=format&w=754&fit=clip"
+                  alt="">
+                <img
+                  class="absolute 2xl:w-[300px] 2xl:h-[300px] md:w-[250px] md:h-[250px] w-[150px] h-[150px] rounded-full sm:border-[20px] md:left-36 md:top-36 left-10 top-28 border-[15px] border-blue-400"
+                  src="https://st2.depositphotos.com/2769299/7314/i/450/depositphotos_73146775-stock-photo-a-stack-of-books-on.jpg"
+                  alt="">
+              </div>
             </div>
-          </div>
 
             <div class="grid sm:grid-cols-2 grid-cols-1 gap-5 mt-10">
               <div class="flex items-center gap-3">
@@ -179,6 +180,56 @@
       </div>
     </section>
 
+    <section>
+      <div class="container mx-auto px-5">
+        <div class="sm:mt-20 mt-10 flex flex-col gap-14">
+          <div class="flex flex-col gap-3">
+            <h2 class="md:text-[40px] sm:text-[30px] text-[24px] font-bold">Lorem, ipsum dolor sit amet consectetur
+              adipisicing elit
+            </h2>
+            <p class="text-[20px] font-medium text-gray-600">2018-yil oktyabr oyidan 2023-yil aprel oyigacha bo‘lgan
+              statistika</p>
+          </div>
+          <div class="flex lg:flex-row flex-col gap-8">
+            <div class="bg-blue-50 rounded-3xl w-full flex flex-col justify-between">
+              <div class="p-5">
+                <h3 class="md:text-[40px] sm:text-[35px] text-[24px] font-bold">6000+</h3>
+                <span class="text-[20px] font-medium text-gray-600">Shu kungacha bitirgan o‘quvchilar</span>
+              </div>
+              <img class="w-[200px]" src="https://najottalim.uz/assets/studentCap.png" alt="">
+            </div>
+
+            <div class="bg-blue-50 rounded-3xl w-full flex flex-col justify-between">
+              <div class="p-5">
+                <h3 class="md:text-[40px] sm:text-[35px] text-[24px] font-bold">85% - 95%</h3>
+                <span class="text-[20px] font-medium text-gray-600">Shu kungacha o‘quvchilarning ishga joylashishi</span>
+              </div>
+              <img class="w-[200px]" src="https://najottalim.uz/assets/studentPortfel.png" alt="">
+            </div>
+
+            <div class="bg-blue-50 rounded-3xl w-full p-5">
+              <div class="flex flex-col gap-5">
+                  <p class="text-[20px] font-medium">6 oylik tajribasi bor* bitiruvchilarning o‘rtacha oyligi</p>
+                  <div class="flex items-center justify-between">
+                    <span class="text-[20px] font-medium text-gray-600">Dasturlash</span>
+                    <span class="md:text-[30px] text-[24px] font-medium">$321</span>
+                  </div>
+                  <div class="flex items-center justify-between">
+                    <span class="text-[20px] font-medium text-gray-600">Marketing</span>
+                    <span class="md:text-[30px] text-[24px] font-medium">$301</span>
+                  </div>
+                  <div class="flex items-center justify-between">
+                    <span class="text-[20px] font-medium text-gray-600">Dizayn</span>
+                    <span class="md:text-[30px] text-[24px] font-medium">$371</span>
+                  </div>
+                  <i><span class="text-red-600">*</span> Zamonaviy kasblarda tajriba oshgani sari oylik ham doimiy oshib boraveradi.</i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <section class="map">
       <div class=" container mx-auto px-5">
         <div class="map__wrapper">
@@ -187,14 +238,15 @@
               Bepul konsultatsiya
             </h1>
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis nesciunt sapiente corrupti pariatur voluptas unde inventore dolorem accusantium dolor deserunt.
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis nesciunt sapiente corrupti pariatur
+              voluptas unde inventore dolorem accusantium dolor deserunt.
             </p>
             <form action="">
               <input type="text" placeholder="Ismingiz">
-            <input type="text" name="" id="" placeholder="+998">
-            <button>
-              So`rov yuborish
-            </button>
+              <input type="text" name="" id="" placeholder="+998">
+              <button>
+                So`rov yuborish
+              </button>
             </form>
           </div>
           <div class="map__center">
@@ -235,21 +287,23 @@ import Footer from '@/components/Footer.vue';
   }
 }
 
-.map{
+.map {}
 
-}
-.map__register{
+.map__register {
   padding: 15px;
   background-color: #F9F7F3;
 }
-.map__register h1{
+
+.map__register h1 {
   font-size: 40px;
 }
-.map__register p{
+
+.map__register p {
   font-size: 18px;
   width: 500px;
   margin-bottom: 20px;
 }
+
 .map__register form input {
   display: block;
   width: 500px;
