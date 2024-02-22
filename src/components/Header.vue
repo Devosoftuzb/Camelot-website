@@ -9,7 +9,7 @@
                     </h1>
                     </div>
                     <div class="header__select">
-                        <select class="border-none p-2 outline-none cursor-pointer" name="" id="">
+                        <select class="border p-3 rounded-lg outline-blue-500 cursor-pointer" name="" id="">
                             <option value="" disabled selected>Fanlar</option>                        
                             <option value="">Ingiliz tili</option>
                             <option value="">Russ tili</option>

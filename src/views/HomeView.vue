@@ -67,8 +67,7 @@
               <img
                 class="absolute z-[-10] 2xl:w-[300px] 2xl:h-[300px] lg:w-[250px] lg:h-[250px] 2xl:top-[-180px] 2xl:left-[-220px] top-[-150px] left-0 rounded-3xl"
                 src="https://img.freepik.com/free-photo/book-composition-with-open-book_23-2147690555.jpg" alt="">
-              <img
-                class="2xl:w-[300px] 2xl:h-[300px] lg:w-[250px] lg:h-[250px] rounded-3xl"
+              <img class="2xl:w-[300px] 2xl:h-[300px] lg:w-[250px] lg:h-[250px] rounded-3xl"
                 src="https://images.theconversation.com/files/45159/original/rptgtpxd-1396254731.jpg?ixlib=rb-1.1.0&q=45&auto=format&w=754&fit=clip"
                 alt="">
               <img
@@ -233,7 +232,7 @@
 
     <section>
       <div class="container mx-auto px-5">
-        <div class="sm:mt-24 mt-10 flex sm:flex-row flex-col gap-10">
+        <div class="sm:mt-24 mt-10 flex lg:flex-row flex-col gap-10">
           <img class="w-full rounded-3xl"
             src="https://st3.depositphotos.com/8911320/33966/i/450/depositphotos_339665118-stock-photo-render-modern-office-interior.jpg"
             alt="">
@@ -257,6 +256,113 @@
       </div>
     </section>
 
+    <section>
+      <div class="container mx-auto px-5">
+        <div class="sm:mt-20 mt-10 flex flex-col gap-10">
+          <div class="flex items-center justify-between">
+            <h2 class="md:text-[40px] sm:text-[30px] text-[24px] font-bold">Kurslar</h2>
+            <select class="border p-3 rounded-lg outline-blue-500 cursor-pointer" name="" id="">
+              <option value="" disabled selected>Barchasi</option>
+              <option value="">Ingiliz tili</option>
+              <option value="">Russ tili</option>
+              <option value="">Turk tili</option>
+            </select>
+          </div>
+          <div class="grid 2xl:grid-cols-3 lg:grid-cols-2 gap-5">
+            <div class="w-full bg-blue-50 rounded-3xl hover:shadow-lg cursor-pointer p-7 flex gap-5">
+              <img class="w-[100px] h-[100px] rounded-3xl sm:block hidden"
+                src="https://nws.cdn.najottalim.uz/main-server/courses/Artboard%202%20copy%2011_d4a52081-3d23-4d51-a2f1-64d9d073f598.png"
+                alt="">
+              <div class="flex flex-col justify-between sm:gap-14 gap-5 w-full">
+                <div class="flex flex-col gap-3">
+                  <h3 class="sm:text-[25px] text-[20px] font-medium text-gray-900">Dasturlash foundation</h3>
+                  <p class="sm:text-[18px] text-[14px] font-medium text-gray-500">5 oy</p>
+                </div>
+                <span
+                  class="flex items-center justify-between sm:text-[18px] text-[14px] font-medium text-gray-500">Dasturlash<span
+                    class="px-5 py-1 rounded-full bg-fuchsia-200 text-yellow-700">Bootcamp</span></span>
+              </div>
+            </div>
+
+            <div class="w-full bg-blue-50 rounded-3xl hover:shadow-lg cursor-pointer p-7 flex gap-5">
+              <img class="w-[100px] h-[100px] rounded-3xl sm:block hidden"
+                src="https://nws.cdn.najottalim.uz/main-server/courses/Artboard%202%20copy%2011-2_19bdf2aa-6671-48a3-80ff-918a497f5207.png"
+                alt="">
+              <div class="flex flex-col justify-between sm:gap-14 gap-5 w-full">
+                <div class="flex flex-col gap-3">
+                  <h3 class="sm:text-[25px] text-[20px] font-medium text-gray-900">Grafik dizayn</h3>
+                  <p class="sm:text-[18px] text-[14px] font-medium text-gray-500">7 oy</p>
+                </div>
+                <span
+                  class="flex items-center justify-between sm:text-[18px] text-[14px] font-medium text-gray-500">Dasturlash<span
+                    class="px-5 py-1 rounded-full bg-fuchsia-200 text-yellow-700">Bootcamp</span></span>
+              </div>
+            </div>
+
+            <div class="w-full bg-blue-50 rounded-3xl hover:shadow-lg cursor-pointer p-7 flex gap-5">
+              <img class="w-[100px] h-[100px] rounded-3xl sm:block hidden"
+                src="https://nws.cdn.najottalim.uz/main-server/courses/Python_279793f4-74b5-40eb-ad5a-3458c8f7b1cc.png"
+                alt="">
+              <div class="flex flex-col justify-between sm:gap-14 gap-5 w-full">
+                <div class="flex flex-col gap-3">
+                  <h3 class="sm:text-[25px] text-[20px] font-medium text-gray-900">Paython</h3>
+                  <p class="sm:text-[18px] text-[14px] font-medium text-gray-500">8 oy</p>
+                </div>
+                <span
+                  class="flex items-center justify-between sm:text-[18px] text-[14px] font-medium text-gray-500">Dasturlash<span
+                    class="px-5 py-1 rounded-full bg-green-200 text-green-500">Standard</span></span>
+              </div>
+            </div>
+
+            <div class="w-full bg-blue-50 rounded-3xl hover:shadow-lg cursor-pointer p-7 flex gap-5">
+              <img class="w-[100px] h-[100px] rounded-3xl sm:block hidden"
+                src="https://nws.cdn.najottalim.uz/main-server/courses/JAVAA_3cc06fdc-25ed-4b5f-acdd-9b0824de6a58.png"
+                alt="">
+              <div class="flex flex-col justify-between sm:gap-14 gap-5 w-full">
+                <div class="flex flex-col gap-3">
+                  <h3 class="sm:text-[25px] text-[20px] font-medium text-gray-900">Java</h3>
+                  <p class="sm:text-[18px] text-[14px] font-medium text-gray-500">8 oy</p>
+                </div>
+                <span
+                  class="flex items-center justify-between sm:text-[18px] text-[14px] font-medium text-gray-500">Dasturlash<span
+                    class="px-5 py-1 rounded-full bg-green-200 text-green-500">Standard</span></span>
+              </div>
+            </div>
+
+            <div class="w-full bg-blue-50 rounded-3xl hover:shadow-lg cursor-pointer p-7 flex gap-5">
+              <img class="w-[100px] h-[100px] rounded-3xl sm:block hidden"
+                src="https://nws.cdn.najottalim.uz/main-server/courses/React_b10c4f5c-5fcb-4a78-a333-f981085b81f7.png"
+                alt="">
+              <div class="flex flex-col justify-between sm:gap-14 gap-5 w-full">
+                <div class="flex flex-col gap-3">
+                  <h3 class="sm:text-[25px] text-[20px] font-medium text-gray-900">React</h3>
+                  <p class="sm:text-[18px] text-[14px] font-medium text-gray-500">8 oy</p>
+                </div>
+                <span
+                  class="flex items-center justify-between sm:text-[18px] text-[14px] font-medium text-gray-500">Dasturlash<span
+                    class="px-5 py-1 rounded-full bg-green-200 text-green-500">Standard</span></span>
+              </div>
+            </div>
+
+            <div class="w-full bg-blue-50 rounded-3xl hover:shadow-lg cursor-pointer p-7 flex gap-5">
+              <img class="w-[100px] h-[100px] rounded-3xl sm:block hidden"
+                src="https://nws.cdn.najottalim.uz/main-server/courses/Marketing_1f08e736-9028-420a-b558-38b98acdde9d.png"
+                alt="">
+              <div class="flex flex-col justify-between sm:gap-14 gap-5 w-full">
+                <div class="flex flex-col gap-3">
+                  <h3 class="sm:text-[25px] text-[20px] font-medium text-gray-900">SMM</h3>
+                  <p class="sm:text-[18px] text-[14px] font-medium text-gray-500">4 oy</p>
+                </div>
+                <span
+                  class="flex items-center justify-between sm:text-[18px] text-[14px] font-medium text-gray-500">Dasturlash<span
+                    class="px-5 py-1 rounded-full bg-blue-100 text-blue-500">Boshqa</span></span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <section class="map">
       <div class=" container mx-auto px-5">
         <div class="map__top">
@@ -267,7 +373,7 @@
             <h2>
               Filialni tanlang
             </h2>
-            <select name="" id="">
+            <select class="border p-3 rounded-lg outline-blue-500 cursor-pointer" name="" id="">
               <option value="">Chilonzor</option>
               <option value="">Chilonzor</option>
               <option value="">Chilonzor</option>
@@ -560,5 +666,4 @@ import Footer from '@/components/Footer.vue';
   .map__register h1 {
     font-size: 20px;
   }
-}
-</style>
+}</style>
