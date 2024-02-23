@@ -1,7 +1,7 @@
 <template>
     <footer>
-        <div class="container mx-auto px-5">
-            <div class="footer__wrapper">
+        <div class="container mx-auto px-5 border-t">
+            <div class="footer__wrapper pt-5">
                 <div class="footer__content">
                     <div class="footer__logo">
                         <h1>
