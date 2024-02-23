@@ -247,7 +247,7 @@
               <input class="w-full px-3 py-4 rounded-lg outline-[#3B82F6] border" type="text" placeholder="Ismingiz">
               <input class="w-full px-3 py-4 rounded-lg outline-[#3B82F6] border" type="text" name="" id=""
                 placeholder="+998">
-              <button class="bg-[#3B82F6] p-5 mt-5 rounded-lg text-white">
+              <button class="bg-[#3B82F6] border border-[#3B82F6] p-5 mt-5 rounded-lg text-white hover:bg-blue-50 hover:text-[#3B82F6]">
                 So`rov yuborish
               </button>
             </form>
@@ -491,7 +491,7 @@
               <input class="w-full px-3 py-4 rounded-lg outline-[#3B82F6] border" type="text" placeholder="Ismingiz">
               <input class="w-full px-3 py-4 rounded-lg outline-[#3B82F6] border" type="text" name="" id=""
                 placeholder="+998">
-              <button class="bg-[#3B82F6] p-5 mt-5 rounded-lg text-white">
+              <button class="bg-[#3B82F6] border border-[#3B82F6] p-5 mt-5 rounded-lg text-white hover:bg-blue-50 hover:text-[#3B82F6]">
                 So`rov yuborish
               </button>
             </form>
@@ -595,17 +595,4 @@ export default {
     transform: rotate(1turn)
   }
 }
-
-/* Добавляем стили для полосы прокрутки */
-
-*::-webkit-scrollbar {
-  width: 10px; /* Ширина полосы прокрутки */
-}
-
-/* Цвет бегунка */
-*::-webkit-scrollbar-thumb {
-  background-color: blue; /* Цвет бегунка */
-}
-
-
 </style>
