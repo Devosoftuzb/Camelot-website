@@ -57,7 +57,7 @@
             <div class="mt-10 flex sm:flex-row flex-col items-center sm:gap-10 gap-5">
               <span class="sm:hidden block font-medium">Lorem ipsum dolor sit amet consectetur adipisicing elit</span>
               <button
-                class="bg-blue-500 sm:w-[250px] w-full text-center sm:p-5 p-3 sm:text-[20px] font-bold text-white rounded-full border border-blue-500 hover:bg-white hover:text-blue-500">Lorem</button>
+                class="btn bg-[#292583] sm:w-[250px] w-full text-center sm:p-5 p-3 sm:text-[20px] font-bold text-white rounded-full border border-[#292583] hover:bg-white hover:text-[#292583]">Lorem</button>
               <span class="sm:block hidden font-medium">Lorem ipsum dolor sit amet consectetur adipisicing elit</span>
             </div>
           </div>
@@ -595,4 +595,19 @@ export default {
     transform: rotate(1turn)
   }
 }
+button{
+  background: linear-gradient(
+    to left,
+    #0866FF -100%,
+    #292583
+   
+  );
+
+  
+}
+
+button:hover{
+  background: white;
+}
+
 </style>
