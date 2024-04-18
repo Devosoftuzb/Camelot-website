@@ -4,7 +4,7 @@
             <div class="footer__wrapper pt-5">
                 <div class="footer__content">
                     <div class="footer__logo">
-                        <img class="footer-logo" src="/images/logo.png" alt="">
+                        <img class="footer-logo" src="/public/images/logo.png" alt="">
                         <div class="footer__logo__text">
                             <div class="footer__logo__text2">
                                 <h2>
