@@ -39,25 +39,25 @@
                                 </td>
                             </tr>
                         </thead>
-                        <tbody>
+                        <tbody v-for="i in store.pagPartnershipAll[store.pag]" :key="i.id">
                             <tr>
                                 <td>
-                                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSAYLB3IWsTasUT1Kt1-UeUbzXQPQZDufxUkA&usqp=CAU" alt="foto">
+                                    <img :src="CONFIG.API_URL + i.image"  alt="foto">
                                 </td>
                                 <td>
                                     <h3>
-                                        John Doe 
+                                        {{ i.title }}
                                     </h3>
                                 </td>
                                 <td>
-                                    <button class="delete">
+                                    <button @click="deletePartnership(i.id)" class="delete">
                                         <svg class="delate" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em"
                                             viewBox="0 0 24 24">
                                             <path fill="currentColor"
                                                 d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6zM19 4h-3.5l-1-1h-5l-1 1H5v2h14z" />
                                         </svg>
                                     </button>
-                                    <button @click="openModalChange" class="edit">
+                                    <button @click="getOnePartnership(i.id)" class="edit">
                                         <svg class="change" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em"
                                             viewBox="0 0 24 24">
                                             <path fill="currentColor"
@@ -72,7 +72,7 @@
             </div>
             <div class="Rasmlar-footer">
                 <div class="footer-wrapper">
-                    <button>
+                    <button @click="store.pag == 0 ? store.pag = store.pagPartnershipAll.length - 1  : store.pag -= 1">
                         <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
                             <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
                                 stroke-width="2" d="M5 12h14M5 12l6 6m-6-6l6-6" />
@@ -80,16 +80,16 @@
                     </button>
                     <div class="footer-content">
                         <span>
-                           1
+                            {{ store.pag + 1 }}
                         </span>
                         <span>
                             /
                         </span>
                         <span>
-                            2
+                            {{ store.pagPartnershipAll.length }}
                         </span>
                     </div>
-                    <button >
+                    <button @click="store.pag + 1 == store.pagPartnershipAll.length ? store.pag = 0 : store.pag += 1">
                         <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 16 16">
                             <path fill="currentColor"
                                 d="M8.22 2.97a.75.75 0 0 1 1.06 0l4.25 4.25a.75.75 0 0 1 0 1.06l-4.25 4.25a.751.751 0 0 1-1.042-.018a.751.751 0 0 1-.018-1.042l2.97-2.97H3.75a.75.75 0 0 1 0-1.5h7.44L8.22 4.03a.75.75 0 0 1 0-1.06" />
@@ -114,13 +114,13 @@
             </button>
         </div>
         <div class="create-modal-main">
-            <form>
+            <form @submit.prevent="createPartnership"> 
                 <div class="form-grid form-name">
                     <label for="fio">
                         <h3>
                             Nomi
                         </h3>
-                        <input  required id="fio" type="text">
+                        <input v-model="partnerships.title" required id="fio" type="text">
                     </label>
                 </div>
                 <div class="form-grid">
@@ -132,7 +132,7 @@
                             <span>
                                 Rasm tanglang
                             </span>
-                            <input type="file">
+                            <input  @change="(e) => setImg(e)" type="file">
                         </label>
                     </div>
                 </div>
@@ -162,13 +162,13 @@
                         </button>
                     </div>
                     <div class="change-main">
-                        <form>
+                        <form @submit.prevent="editPartnership">
                 <div class="form-grid form-name">
                     <label for="fio">
                         <h3>
                             Nomi
                         </h3>
-                        <input  required id="fio" type="text">
+                        <input v-model="edit.title" required id="fio" type="text">
                     </label>
                 </div>
                 <div class="form-grid">
@@ -180,7 +180,7 @@
                             <span>
                                 Rasm tanglang
                             </span>
-                            <input type="file">
+                            <input @change="(e) => setImg(e)" type="file">
                         </label>
                     </div>
                 </div>
@@ -196,8 +196,10 @@
     </template>
     <script setup>
         import SaidBar from '@/components/SaidBar.vue';
-        import { ref } from 'vue';
+        import { ref, reactive, onMounted } from 'vue';
         import { useSidebarStore } from '@/stores/sidebar.js';
+        import axios from '@/services/axios'
+        import CONFIG from '../../stores/config'
         const modal = ref(false)
         const oppenModal = () => (modal.value = !modal.value)
         const openChange = ref(false)
@@ -215,6 +217,146 @@
             modal.classList.toggle('db');
             
         }
+
+        const getImg = ref(null);
+const setImg = (e) => {
+    getImg.value = e.target.files[0];
+    console.log(getImg.value);
+};
+
+const store = reactive({
+    partnershipAll: false,
+    pagPartnershipAll: [],
+    pag: 0,
+});
+
+const partnerships = reactive({
+    title: "",
+})
+
+const edit = reactive({
+    id: 0,
+    title: "",
+});
+
+
+const deletePartnership = (id) => {
+    axios
+        .delete(`/slayd-images/delete/${id}`, {
+            headers: {
+                Authorization: `Bearer ${localStorage.getItem("token")}`,
+            },
+        })
+        .then((res) => {
+            getAllPartnership()
+            location.reload()
+        })
+        .catch((error) => {
+            console.log(error);
+        });
+}
+
+const getOnePartnership = (id) => {
+    axios
+        .get(`/slayd-images/find/${id}`, {
+        })
+        .then((res) => {
+            getImg.value = res.data.image
+            edit.title = res.data.title;
+            edit.id = res.data.id;
+            openChange.value = true;
+        })
+        .catch((error) => {
+            console.log("error", error);
+        });
+};
+
+const editPartnership = () => {
+    const data = {
+        image: getImg.value,
+        title: edit.title,
+    };
+
+    const formData = new FormData();
+    for (let i of Object.keys(data)) {
+        formData.append(i, data[i]);
+    }
+
+    axios
+        .put(`/slayd-images/update/${edit.id}`, formData, {
+            headers: {
+                Authorization: `Bearer ${localStorage.getItem("token")}`,
+            },
+        })
+        .then((res) => {
+            edit.id = 0
+            edit.title = ""
+            getAllPartnership()
+            location.reload()
+        })
+        .catch((error) => {
+            console.log("error", error);
+        });
+};
+
+const createPartnership = () => {
+    const data = {
+        image: getImg.value,
+        title: partnerships.title,
+    };
+
+    const formData = new FormData();
+    for (let i of Object.keys(data)) {
+        formData.append(i, data[i]);
+    }
+
+
+    axios
+        .post("/slayd-images/create", formData, {
+            headers: {
+                Authorization: `Bearer ${localStorage.getItem("token")}`,
+            },
+        })
+        .then((res) => {
+            partnerships.title = "";
+            modal.value = false
+            getAllPartnership()
+            location.reload()
+        })
+        .catch((error) => {
+            console.log(error);
+        });
+}
+
+const getAllPartnership = () => {
+    axios
+        .get("/slayd-images/find-all", {
+        })
+        .then((res) => {
+            store.partnershipAll = res.data
+            store.pagPartnershipAll = store.pagPartnershipAll.reverse()
+            let partnerships = []
+            for (let i in store.partnershipAll) {
+                partnerships.push(store.partnershipAll[i])
+                if (partnerships.length == 5) {
+                    store.pagPartnershipAll.push(partnerships)
+                    partnerships = []
+                }
+                if ((Number(i) + 1) == store.partnershipAll.length && (store.pagPartnershipAll.length == 0 || partnerships.length > 0)) {
+                    store.pagPartnershipAll.push(partnerships)
+                    partnerships = []
+                }
+            }
+        })
+        .catch((error) => {
+            store.error = true;
+        });
+};
+
+onMounted(() => {
+    getAllPartnership();
+});
+
     </script>
         
     <style scoped>
