@@ -47,7 +47,8 @@
                         <tbody v-for="i in store.pagLessonAll[store.pag]" :key="i.id">
                             <tr>
                                 <td>
-                                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSAYLB3IWsTasUT1Kt1-UeUbzXQPQZDufxUkA&usqp=CAU" alt="foto">
+                                    <img :src="CONFIG.API_URL + i.image"
+                                         alt="foto">
                                 </td>
                                 <td>
                                     <h3>

@@ -10,7 +10,7 @@ const router = createRouter({
     },
     {
       path: '/admin',
-      name: 'Admin',
+      name: 'admin',
       component:()=>import('@/admin/Home/Admin.vue')
     },
     {
@@ -39,8 +39,8 @@ const router = createRouter({
       component:()=>import('@/admin/Afzaliklar/Afzaliklar.vue')
     },
     {
-      path: '/Bog`lanish',
-      name: 'Bog`lanish',
+      path: '/Habarlar',
+      name: 'Habarlar',
       component:()=>import('@/admin/Bog`lanish/Bog`lanish.vue')
     },
     {
@@ -55,5 +55,23 @@ const router = createRouter({
     },
   ]
 })
+// router.beforeEach((to, from, next) => {
+//   let token = localStorage.getItem("token");
+
+//   if (
+//     (to.name == "admin" ||
+//       to.name == "Ustozlar" ||
+//       to.name == "Kurslar" ||
+//       to.name == "Rasmlar" ||
+//       to.name == "Afzaliklar" ||
+//       to.name == "Habarlar") &&
+//     to.name !== "Login" &&
+//     !token
+//   ) {
+//     next({ name: "Login" });
+//   } else {
+//     next();
+//   }
+// });
 
 export default router

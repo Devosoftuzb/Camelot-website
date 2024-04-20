@@ -4,18 +4,18 @@
             <div class="login-logo">
                 <img src="../../../public/images/logo.png" alt="">
             </div>
-            <form>
+            <form @submit.prevent="loginAdmin">
                 <label for="email">
                     <h3>
                         E-mail
                     </h3>
-                    <input required type="email" name="" id="email">
+                    <input v-model="login.email" required type="email" name="" id="email">
                 </label>
                 <label for="password">
                     <h3>
                         Parol
                     </h3>
-                    <input required type="password" name="" id="password">
+                    <input v-model="login.password" required type="password" name="" id="password">
                 </label>
                 <button type="submit">
                     Kirish
@@ -25,7 +25,34 @@
     </div>
 </template>
 <script setup>
+import { reactive } from "vue";
+import axios from "@/services/axios";
+import router from "@/router";
 
+const login = reactive({
+  email: "",
+  password: "",
+});
+
+const loginAdmin = () => {
+  const data = {
+    email: login.email,
+    password: login.password
+  };
+  axios
+    .post("/admins/login", data, {
+    })
+    .then((res) => {
+      console.log(res.data.tokens.refresh_token)
+      login.email = "";
+      login.password = "";
+      localStorage.setItem('token' , res.data.tokens.refresh_token)
+      router.push('/admin')
+    })
+    .catch((error) => {
+      console.log(error);
+    });
+};
 </script>
         
 <style scoped>

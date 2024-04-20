@@ -83,38 +83,13 @@
     <section>
       <div class="container mx-auto px-5">
         <div class="sm:mt-32 mt-10 flex flex-col gap-10">
-          <h2 class="md:text-[40px] sm:text-[30px] text-[24px] font-bold">Lorem ipsum dolor sit amet consectetur
-            adipisicing elit</h2>
+          <h2 class="md:text-[40px] sm:text-[30px] text-[24px] font-bold">Bizning Afzaliklarimiz</h2>
           <div class="grid sm:grid-cols-2 grid-cols-1 gap-7">
-            <div class="bg-blue-50 p-10 rounded-3xl flex flex-col gap-y-4">
+            <div v-for="i in store.advantages" :key="i.id" class="bg-blue-50 p-10 rounded-3xl flex flex-col gap-y-4">
               <i class='bx bx-globe sm:text-[50px] text-[35px] text-amber-700'></i>
-              <h3 class="sm:text-[25px] text-[20px] font-bold text-gray-900">Lorem karochi</h3>
+              <h3 class="sm:text-[25px] text-[20px] font-bold text-gray-900">{{i.title}}</h3>
               <p class="sm:text-[18px] text-[14px] font-medium text-gray-500">
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit
-              </p>
-            </div>
-
-            <div class="bg-blue-50 p-10 rounded-3xl flex flex-col gap-y-4">
-              <i class='bx bx-globe sm:text-[50px] text-[35px] text-amber-700'></i>
-              <h3 class="sm:text-[25px] text-[20px] font-bold text-gray-900">Lorem karochi</h3>
-              <p class="sm:text-[18px] text-[14px] font-medium text-gray-500">
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit
-              </p>
-            </div>
-
-            <div class="bg-blue-50 p-10 rounded-3xl flex flex-col gap-y-4">
-              <i class='bx bx-globe sm:text-[50px] text-[35px] text-amber-700'></i>
-              <h3 class="sm:text-[25px] text-[20px] font-bold text-gray-900">Lorem karochi</h3>
-              <p class="sm:text-[18px] text-[14px] font-medium text-gray-500">
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit
-              </p>
-            </div>
-
-            <div class="bg-blue-50 p-10 rounded-3xl flex flex-col gap-y-4">
-              <i class='bx bx-globe sm:text-[50px] text-[35px] text-amber-700'></i>
-              <h3 class="sm:text-[25px] text-[20px] font-bold text-gray-900">Lorem karochi</h3>
-              <p class="sm:text-[18px] text-[14px] font-medium text-gray-500">
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit
+                {{i.body}}
               </p>
             </div>
           </div>
@@ -125,54 +100,9 @@
     <section class="sm:mt-20 mt-10 overflow-x-hidden">
       <div class="container mx-auto p-5">
         <div class="items" data-v-e33b1926="">
-          <div class="entry" data-v-e33b1926="">
+          <div  v-for="i in store.slaydImg" :key="i.id"  class="entry" data-v-e33b1926="">
             <img class="sm:w-[400px] w-[250px] rounded-2xl"
-              src="https://img.freepik.com/free-photo/successful-happy-business-team_53876-74892.jpg?size=626&ext=jpg&ga=GA1.1.2008272138.1708387200&semt=sph"
-              data-v-e33b1926 alt="" />
-          </div>
-          <div class="entry" data-v-e33b1926="">
-            <img class="sm:w-[400px] w-[250px] rounded-2xl"
-              src="https://img.freepik.com/free-photo/successful-happy-business-team_53876-74892.jpg?size=626&ext=jpg&ga=GA1.1.2008272138.1708387200&semt=sph"
-              data-v-e33b1926 alt="" />
-          </div>
-          <div class="entry" data-v-e33b1926="">
-            <img class="sm:w-[400px] w-[250px] rounded-2xl"
-              src="https://img.freepik.com/free-photo/successful-happy-business-team_53876-74892.jpg?size=626&ext=jpg&ga=GA1.1.2008272138.1708387200&semt=sph"
-              data-v-e33b1926 alt="" />
-          </div>
-          <div class="entry" data-v-e33b1926="">
-            <img class="sm:w-[400px] w-[250px] rounded-2xl"
-              src="https://img.freepik.com/free-photo/successful-happy-business-team_53876-74892.jpg?size=626&ext=jpg&ga=GA1.1.2008272138.1708387200&semt=sph"
-              data-v-e33b1926 alt="" />
-          </div>
-          <div class="entry" data-v-e33b1926="">
-            <img class="sm:w-[400px] w-[250px] rounded-2xl"
-              src="https://img.freepik.com/free-photo/successful-happy-business-team_53876-74892.jpg?size=626&ext=jpg&ga=GA1.1.2008272138.1708387200&semt=sph"
-              data-v-e33b1926 alt="" />
-          </div>
-          <div class="entry" data-v-e33b1926="">
-            <img class="sm:w-[400px] w-[250px] rounded-2xl"
-              src="https://img.freepik.com/free-photo/successful-happy-business-team_53876-74892.jpg?size=626&ext=jpg&ga=GA1.1.2008272138.1708387200&semt=sph"
-              data-v-e33b1926 alt="" />
-          </div>
-          <div class="entry" data-v-e33b1926="">
-            <img class="sm:w-[400px] w-[250px] rounded-2xl"
-              src="https://img.freepik.com/free-photo/successful-happy-business-team_53876-74892.jpg?size=626&ext=jpg&ga=GA1.1.2008272138.1708387200&semt=sph"
-              data-v-e33b1926 alt="" />
-          </div>
-          <div class="entry" data-v-e33b1926="">
-            <img class="sm:w-[400px] w-[250px] rounded-2xl"
-              src="https://img.freepik.com/free-photo/successful-happy-business-team_53876-74892.jpg?size=626&ext=jpg&ga=GA1.1.2008272138.1708387200&semt=sph"
-              data-v-e33b1926 alt="" />
-          </div>
-          <div class="entry" data-v-e33b1926="">
-            <img class="sm:w-[400px] w-[250px] rounded-2xl"
-              src="https://img.freepik.com/free-photo/successful-happy-business-team_53876-74892.jpg?size=626&ext=jpg&ga=GA1.1.2008272138.1708387200&semt=sph"
-              data-v-e33b1926 alt="" />
-          </div>
-          <div class="entry" data-v-e33b1926="">
-            <img class="sm:w-[400px] w-[250px] rounded-2xl"
-              src="https://img.freepik.com/free-photo/successful-happy-business-team_53876-74892.jpg?size=626&ext=jpg&ga=GA1.1.2008272138.1708387200&semt=sph"
+             :src="CONFIG.API_URL + i.image"
               data-v-e33b1926 alt="" />
           </div>
         </div>
@@ -243,9 +173,9 @@
             <p class="text-[18px] text-gray-600">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis nesciunt sapiente corrupti pariatur
             </p>
-            <form action="" class="flex flex-col gap-5 mt-5">
-              <input class="w-full px-3 py-4 rounded-lg outline-[#3B82F6] border" type="text" placeholder="Ismingiz">
-              <input class="w-full px-3 py-4 rounded-lg outline-[#3B82F6] border" type="text" name="" id=""
+            <form   @submit.prevent="createContact" action="" class="flex flex-col gap-5 mt-5">
+              <input v-model="contact.name" class="w-full px-3 py-4 rounded-lg outline-[#3B82F6] border" type="text" placeholder="Ismingiz">
+              <input v-model="contact.phone" class="w-full px-3 py-4 rounded-lg outline-[#3B82F6] border" type="text" name="" id=""
                 placeholder="+998">
               <button class="bg-[#3B82F6] border border-[#3B82F6] p-5 mt-5 rounded-lg text-white hover:bg-blue-50 hover:text-[#3B82F6]">
                 So`rov yuborish
@@ -269,93 +199,18 @@
             </select>
           </div>
           <div class="grid 2xl:grid-cols-3 lg:grid-cols-2 gap-5">
-            <div class="w-full bg-blue-50 rounded-3xl hover:shadow-lg cursor-pointer p-7 flex gap-5">
+            <div  v-for="i in store.showLesson" :key="i.id" class="w-full bg-blue-50 rounded-3xl hover:shadow-lg cursor-pointer p-7 flex gap-5">
               <img class="w-[100px] h-[100px] rounded-3xl sm:block hidden"
-                src="https://nws.cdn.najottalim.uz/main-server/courses/Artboard%202%20copy%2011_d4a52081-3d23-4d51-a2f1-64d9d073f598.png"
+                :src="CONFIG.API_URL + i.image"
                 alt="">
               <div class="flex flex-col justify-between sm:gap-14 gap-5 w-full">
                 <div class="flex flex-col gap-3">
-                  <h3 class="sm:text-[25px] text-[20px] font-medium text-gray-900">Dasturlash foundation</h3>
-                  <p class="sm:text-[18px] text-[14px] font-medium text-gray-500">5 oy</p>
+                  <h3 class="sm:text-[25px] text-[20px] font-medium text-gray-900">{{i.name}}</h3>
+                  <p class="sm:text-[18px] text-[14px] font-medium text-gray-500">{{i.continuity}} oy</p>
                 </div>
                 <span
                   class="flex items-center justify-between sm:text-[18px] text-[14px] font-medium text-gray-500">Dasturlash<span
                     class="px-5 py-1 rounded-full bg-fuchsia-200 text-yellow-700">Bootcamp</span></span>
-              </div>
-            </div>
-
-            <div class="w-full bg-blue-50 rounded-3xl hover:shadow-lg cursor-pointer p-7 flex gap-5">
-              <img class="w-[100px] h-[100px] rounded-3xl sm:block hidden"
-                src="https://nws.cdn.najottalim.uz/main-server/courses/Artboard%202%20copy%2011-2_19bdf2aa-6671-48a3-80ff-918a497f5207.png"
-                alt="">
-              <div class="flex flex-col justify-between sm:gap-14 gap-5 w-full">
-                <div class="flex flex-col gap-3">
-                  <h3 class="sm:text-[25px] text-[20px] font-medium text-gray-900">Grafik dizayn</h3>
-                  <p class="sm:text-[18px] text-[14px] font-medium text-gray-500">7 oy</p>
-                </div>
-                <span
-                  class="flex items-center justify-between sm:text-[18px] text-[14px] font-medium text-gray-500">Dasturlash<span
-                    class="px-5 py-1 rounded-full bg-fuchsia-200 text-yellow-700">Bootcamp</span></span>
-              </div>
-            </div>
-
-            <div class="w-full bg-blue-50 rounded-3xl hover:shadow-lg cursor-pointer p-7 flex gap-5">
-              <img class="w-[100px] h-[100px] rounded-3xl sm:block hidden"
-                src="https://nws.cdn.najottalim.uz/main-server/courses/Python_279793f4-74b5-40eb-ad5a-3458c8f7b1cc.png"
-                alt="">
-              <div class="flex flex-col justify-between sm:gap-14 gap-5 w-full">
-                <div class="flex flex-col gap-3">
-                  <h3 class="sm:text-[25px] text-[20px] font-medium text-gray-900">Paython</h3>
-                  <p class="sm:text-[18px] text-[14px] font-medium text-gray-500">8 oy</p>
-                </div>
-                <span
-                  class="flex items-center justify-between sm:text-[18px] text-[14px] font-medium text-gray-500">Dasturlash<span
-                    class="px-5 py-1 rounded-full bg-green-200 text-green-500">Standard</span></span>
-              </div>
-            </div>
-
-            <div class="w-full bg-blue-50 rounded-3xl hover:shadow-lg cursor-pointer p-7 flex gap-5">
-              <img class="w-[100px] h-[100px] rounded-3xl sm:block hidden"
-                src="https://nws.cdn.najottalim.uz/main-server/courses/JAVAA_3cc06fdc-25ed-4b5f-acdd-9b0824de6a58.png"
-                alt="">
-              <div class="flex flex-col justify-between sm:gap-14 gap-5 w-full">
-                <div class="flex flex-col gap-3">
-                  <h3 class="sm:text-[25px] text-[20px] font-medium text-gray-900">Java</h3>
-                  <p class="sm:text-[18px] text-[14px] font-medium text-gray-500">8 oy</p>
-                </div>
-                <span
-                  class="flex items-center justify-between sm:text-[18px] text-[14px] font-medium text-gray-500">Dasturlash<span
-                    class="px-5 py-1 rounded-full bg-green-200 text-green-500">Standard</span></span>
-              </div>
-            </div>
-
-            <div class="w-full bg-blue-50 rounded-3xl hover:shadow-lg cursor-pointer p-7 flex gap-5">
-              <img class="w-[100px] h-[100px] rounded-3xl sm:block hidden"
-                src="https://nws.cdn.najottalim.uz/main-server/courses/React_b10c4f5c-5fcb-4a78-a333-f981085b81f7.png"
-                alt="">
-              <div class="flex flex-col justify-between sm:gap-14 gap-5 w-full">
-                <div class="flex flex-col gap-3">
-                  <h3 class="sm:text-[25px] text-[20px] font-medium text-gray-900">React</h3>
-                  <p class="sm:text-[18px] text-[14px] font-medium text-gray-500">8 oy</p>
-                </div>
-                <span
-                  class="flex items-center justify-between sm:text-[18px] text-[14px] font-medium text-gray-500">Dasturlash<span
-                    class="px-5 py-1 rounded-full bg-green-200 text-green-500">Standard</span></span>
-              </div>
-            </div>
-
-            <div class="w-full bg-blue-50 rounded-3xl hover:shadow-lg cursor-pointer p-7 flex gap-5">
-              <img class="w-[100px] h-[100px] rounded-3xl sm:block hidden"
-                src="https://nws.cdn.najottalim.uz/main-server/courses/Marketing_1f08e736-9028-420a-b558-38b98acdde9d.png"
-                alt="">
-              <div class="flex flex-col justify-between sm:gap-14 gap-5 w-full">
-                <div class="flex flex-col gap-3">
-                  <h3 class="sm:text-[25px] text-[20px] font-medium text-gray-900">SMM</h3>
-                  <p class="sm:text-[18px] text-[14px] font-medium text-gray-500">4 oy</p>
-                </div>
-                <span
-                  class="flex items-center justify-between sm:text-[18px] text-[14px] font-medium text-gray-500">Dasturlash<span
-                    class="px-5 py-1 rounded-full bg-blue-100 text-blue-500">Boshqa</span></span>
               </div>
             </div>
           </div>
@@ -370,28 +225,26 @@
       <swiper class="swiper-preloader-spin"  :modules="modules" :slides-per-view="1" :space-between="50"
         navigation :pagination="{ clickable: true }" :scrollbar="{ draggable: true }" @swiper="onSwiper"
         @slideChange="onSlideChange" :autoplay="{ delay: 3000 }"> 
-        <swiper-slide class="pb-20 my-10">
+        <swiper-slide v-for="i in store.showTeachers" :key="i.id" class="pb-20 my-10">
           <div class="container mx-auto px-5">
             <div class="2xl:px-32 md:px-24 flex xl:flex-row flex-col items-center justify-between xl:gap-24 gap-14">
               <img class="sm:w-[350px] sm:h-[350px] w-[200px] h-[200px] rounded-full"
-                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSAYLB3IWsTasUT1Kt1-UeUbzXQPQZDufxUkA&usqp=CAU"
+                :src="CONFIG.API_URL + i.image"
                 alt="">
               <div class="flex flex-col gap-3 xl:text-start text-center">
-                <h3 class="md:text-[40px] sm:text-[30px] text-[24px] text-gray-700 font-bold">John Doe</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste neque tempore, consequuntur voluptas
-                  expedita ducimus labore itaque, maiores quasi aliquam eum amet dolorem? Sapiente fuga in aliquam, quasi
-                  sequi ipsa.</p>
+                <h3 class="md:text-[40px] sm:text-[30px] text-[24px] text-gray-700 font-bold">{{i.full_name}}</h3>
+                <p>{{i.info}}</p>
                 <div class="flex gap-10 justify-between mt-10">
                   <div class="text-center">
-                    <p class="2xl:text-[40px] lg:text-[30px] font-bold text-green-600 uppercase">Dasturchi</p>
+                    <p class="2xl:text-[40px] lg:text-[30px] font-bold text-green-600 uppercase">{{i.profession }}</p>
                     <span class="text-[18px] font-medium text-gray-500">Lavozimi</span>
                   </div>
                   <div class="text-center">
-                    <p class="2xl:text-[40px] lg:text-[30px] font-bold text-green-600 uppercase">5 years</p>
+                    <p class="2xl:text-[40px] lg:text-[30px] font-bold text-green-600 uppercase">{{i.experience}}</p>
                     <span class="text-[18px] font-medium text-gray-500">Experience</span>
                   </div>
                   <div class="text-center">
-                    <p class="2xl:text-[40px] lg:text-[30px] font-bold text-green-600 uppercase">1000+</p>
+                    <p class="2xl:text-[40px] lg:text-[30px] font-bold text-green-600 uppercase">{{i.num_of_students}}</p>
                     <span class="text-[18px] font-medium text-gray-500">Students</span>
                   </div>
                 </div>
@@ -400,35 +253,7 @@
           </div>
         </swiper-slide>
 
-        <swiper-slide class="pb-20 my-10">
-          <div class="container mx-auto px-5">
-            <div class="2xl:px-32 md:px-24 flex xl:flex-row flex-col items-center justify-between xl:gap-24 gap-14">
-              <img class="sm:w-[350px] sm:h-[350px] w-[200px] h-[200px] rounded-full"
-                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSAYLB3IWsTasUT1Kt1-UeUbzXQPQZDufxUkA&usqp=CAU"
-                alt="">
-              <div class="flex flex-col gap-3 xl:text-start text-center">
-                <h3 class="md:text-[40px] sm:text-[30px] text-[24px] text-gray-700 font-bold">John Doe</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste neque tempore, consequuntur voluptas
-                  expedita ducimus labore itaque, maiores quasi aliquam eum amet dolorem? Sapiente fuga in aliquam, quasi
-                  sequi ipsa.</p>
-                <div class="flex gap-10 justify-between mt-10">
-                  <div class="text-center">
-                    <p class="2xl:text-[40px] lg:text-[30px] font-bold text-green-600 uppercase">Dasturchi</p>
-                    <span class="text-[18px] font-medium text-gray-500">Lavozimi</span>
-                  </div>
-                  <div class="text-center">
-                    <p class="2xl:text-[40px] lg:text-[30px] font-bold text-green-600 uppercase">5 years</p>
-                    <span class="text-[18px] font-medium text-gray-500">Experience</span>
-                  </div>
-                  <div class="text-center">
-                    <p class="2xl:text-[40px] lg:text-[30px] font-bold text-green-600 uppercase">1000+</p>
-                    <span class="text-[18px] font-medium text-gray-500">Students</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </swiper-slide>
+        
 
         <swiper-slide class="pb-20 my-10">
           <div class="container mx-auto px-5">
@@ -461,8 +286,7 @@
         </swiper-slide>
       </swiper>
     </section>
-
-    <section class="sm:mt-20 mt-10">
+        <section class="sm:mt-20 mt-10">
       <div class="container mx-auto px-5">
         <div class="flex items-center sm:mb-14 mb-10">
           <h1 class="sm:block hidden md:text-[40px] sm:text-[30px] text-[24px] font-bold w-full">
@@ -487,9 +311,9 @@
             <p class="text-[18px] text-gray-600">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis nesciunt sapiente corrupti pariatur
             </p>
-            <form action="" class="flex flex-col gap-5 mt-5">
-              <input class="w-full px-3 py-4 rounded-lg outline-[#3B82F6] border" type="text" placeholder="Ismingiz">
-              <input class="w-full px-3 py-4 rounded-lg outline-[#3B82F6] border" type="text" name="" id=""
+            <form   @submit.prevent="createContact" action="" class="flex flex-col gap-5 mt-5">
+              <input v-model="contact.name" class="w-full px-3 py-4 rounded-lg outline-[#3B82F6] border" type="text" placeholder="Ismingiz">
+              <input v-model="contact.phone" class="w-full px-3 py-4 rounded-lg outline-[#3B82F6] border" type="text" name="" id=""
                 placeholder="+998">
               <button class="bg-[#3B82F6] border border-[#3B82F6] p-5 mt-5 rounded-lg text-white hover:bg-blue-50 hover:text-[#3B82F6]">
                 So`rov yuborish
@@ -538,6 +362,9 @@ import Header from '@/components/Header.vue';
 import Footer from '@/components/Footer.vue';
 import { Swiper, SwiperSlide } from 'swiper/vue';
 import { Navigation, Pagination, A11y, Autoplay } from 'swiper/modules';
+import { onMounted, ref, reactive } from "vue";
+import axios from "@/services/axios";
+import CONFIG from "@/stores/config";
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
@@ -547,7 +374,9 @@ export default {
     Swiper,
     SwiperSlide,
     Header,
-    Footer
+    Footer,
+    axios,
+    CONFIG
   },
   setup() {
 
@@ -558,11 +387,139 @@ export default {
     const onSlideChange = () => {
       console.log('slide change');
     };
+    const contact = reactive ({
+      name: "",
+      phone: "",
+    }) 
+    const createContact = () => {
+    const data = {
+      name: contact.name,
+      phone: String(contact.phone),
+    };
+
+    axios
+        .post("/contact/create", data, {
+        })
+        .then((res) => {
+            console.log(res)
+            contact.name = "";
+            contact.phone = "";
+        })
+        .catch((error) => {
+            console.log(error);
+        });
+}
+
+  const store = reactive({
+            news: false,
+            oneNews: false,
+            newsData: false,
+            teachers: false,
+            showTeachers: [],
+            lessons: false,
+            showLesson: [],
+            advantages: false,
+            slaydImg:false,
+            sch: 0,
+            length: 0
+        });
+
+
+
+ const getAlladvantagesProduct = () => {
+            axios
+                .get("/advantages/find-all", {
+                })
+                .then((res) => {
+                  
+                    store.advantages = res.data
+                    store.advantages = store.advantages.reverse()
+                    
+                })
+                .catch((error) => {
+                    console.log(error);
+                });
+                
+        };
+ const getAllSlaydImagesProduct = () => {
+            axios
+                .get("/slayd-images/find-all", {
+                })
+                .then((res) => {
+                  
+                    store.slaydImg = res.data
+                    store.slaydImg = store.slaydImg.reverse()
+
+                })
+                .catch((error) => {
+                    console.log(error);
+                });
+                
+        };
+const getAllLessonsProduct = () => {
+            axios
+                .get("/lessons/find-all", {
+                })
+                .then((res) => {
+                    store.lessons = res.data
+                    store.lessons = store.lessons.reverse()
+                    if (store.lessons.length > 6) {
+                        for (let i = 0; i < 6; i++) {
+                            store.showLesson.push(store.lessons[i])
+                        }
+                    }
+                    else {
+                        store.showLesson = store.lessons
+                    }
+                })
+                .catch((error) => {
+                    console.log(error);
+                });
+        };
+
+const getAllTeachersProduct = () => {
+            axios
+                .get("/teachers/find-all", {
+                })
+                .then((res) => {
+                    store.teachers = res.data
+                    store.teachers = store.teachers.reverse()
+                    store.teachers.sort(function (x, y) {
+                        return (x.status === y.status) ? 0 : y.status ? -1 : 1;
+                    });
+                    if (store.teachers.length > 7) {
+                        for (let i = 0; i < 7; i++) {
+                            store.showTeachers.push(store.teachers[i])
+                        }
+                    }
+                    else {
+                        store.showTeachers = store.teachers
+                    }
+                })
+                .catch((error) => {
+                    console.log(error);
+                });
+        };
+
+
+onMounted(() => {
+            getAllTeachersProduct()
+            getAllLessonsProduct()
+            getAlladvantagesProduct()
+            getAllSlaydImagesProduct()
+        });
+
     return {
+      CONFIG,
+      onMounted,
+      store,
+      createContact,
+      contact,
       onSwiper,
       onSlideChange,
       modules: [Navigation, Pagination, A11y, Autoplay]
     };
+
   },
 };
 </script>
@@ -609,5 +566,17 @@ button{
 button:hover{
   background: white;
 }
-
+.entry img{
+  width:500px;
+  height:400px;
+   overflow: hidden;
+    object-fit: cover;
+    object-position: center;
+}
+@media(max-width:1300px){
+  .entry img{
+    width:200px;
+    height:200px;
+  }
+}
 </style>

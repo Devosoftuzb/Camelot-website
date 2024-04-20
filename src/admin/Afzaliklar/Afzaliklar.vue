@@ -122,7 +122,7 @@
                         <h3>
                             Nomi
                         </h3>
-                        <input v-model="partnerships.title" required id="fio" type="text">
+                        <input v-model="preferences.title" required id="fio" type="text">
                     </label>
                 </div>
                 <div class="form-grid">
@@ -130,7 +130,7 @@
                             <h3>
                                 Malumot
                             </h3>
-                            <textarea v-model="partnerships.body" class="teacher-info" name="" id="" cols=""
+                            <textarea v-model="preferences.body" class="teacher-info" name="" id="" cols=""
                                 rows=""></textarea>
                         </label>
                 </div>
@@ -160,27 +160,23 @@
                         </button>
                     </div>
                     <div class="change-main">
-                        <form>
-                <div class="form-grid form-name">
+                         <form @submit.prevent="editPartnership">
+                    <div class="form-grid form-name">
                     <label for="fio">
                         <h3>
                             Nomi
                         </h3>
-                        <input  required id="fio" type="text">
+                        <input v-model="edit.title" required id="fio" type="text">
                     </label>
                 </div>
                 <div class="form-grid">
-                    <div class="modal-foto">
-                        <h3>
-                            Rasm qoish
-                        </h3>
-                        <label class="file-input-container" for="foto">
-                            <span>
-                                Rasm tanglang
-                            </span>
-                            <input type="file">
+                    <label for="raqam">
+                            <h3>
+                                Malumot
+                            </h3>
+                            <textarea v-model="edit.body" class="teacher-info" name="" id="" cols=""
+                                rows=""></textarea>
                         </label>
-                    </div>
                 </div>
                 <div class="modal-footer">
                     <button class="submitBtn" type="submit">
@@ -232,7 +228,7 @@
             pag: 0,
         });
         
-        const partnerships = reactive({
+        const preferences = reactive({
             title: "",
             body:"",
         })
@@ -278,18 +274,13 @@
         
         const editPartnership = () => {
             const data = {
-                image: getImg.value,
                 title: edit.title,
                 body: edit.body,
             };
         
-            const formData = new FormData();
-            for (let i of Object.keys(data)) {
-                formData.append(i, data[i]);
-            }
         
             axios
-                .put(`/advantages/update/${edit.id}`, formData, {
+                .put(`/advantages/update/${edit.id}`, data, {
                     headers: {
                         Authorization: `Bearer ${localStorage.getItem("token")}`,
                     },
@@ -308,26 +299,20 @@
         
         const createPartnership = () => {
             const data = {
-                image: getImg.value,
-                title:  String(partnerships.title) ,
-                body:partnerships.body,
+                title:  String(preferences.title) ,
+                body: preferences.body,
             };
-        
-            const formData = new FormData();
-            for (let i of Object.keys(data)) {
-                formData.append(i, data[i]);
-            }
         
         
             axios
-                .post("/advantages/create", formData, {
+                .post("/advantages/create", data, {
                     headers: {
                         Authorization: `Bearer ${localStorage.getItem("token")}`,
                     },
                 })
                 .then((res) => {
-                    partnerships.title = "";
-                    partnerships.body = "";
+                    preferences.title = "";
+                    preferences.body = "";
                     modal.value = false
                     getAllPartnership()
                     location.reload()
@@ -344,16 +329,16 @@
                 .then((res) => {
                     store.partnershipAll = res.data
                     store.pagPartnershipAll = store.pagPartnershipAll.reverse()
-                    let partnerships = []
+                    let preferences = []
                     for (let i in store.partnershipAll) {
-                        partnerships.push(store.partnershipAll[i])
-                        if (partnerships.length == 4) {
-                            store.pagPartnershipAll.push(partnerships)
-                            partnerships = []
+                        preferences.push(store.partnershipAll[i])
+                        if (preferences.length == 4) {
+                            store.pagPartnershipAll.push(preferences)
+                            preferences = []
                         }
-                        if ((Number(i) + 1) == store.partnershipAll.length && (store.pagPartnershipAll.length == 0 || partnerships.length > 0)) {
-                            store.pagPartnershipAll.push(partnerships)
-                            partnerships = []
+                        if ((Number(i) + 1) == store.partnershipAll.length && (store.pagPartnershipAll.length == 0 || preferences.length > 0)) {
+                            store.pagPartnershipAll.push(preferences)
+                            preferences = []
                         }
                     }
                 })

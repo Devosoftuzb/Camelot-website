@@ -20,7 +20,7 @@
                             Ustozlar
                         </h2>
                         <span>
-                            10
+                            {{lengthAll.teacher}}
                         </span>
                     </div>
                     <router-link to="/Ustozlar">
@@ -33,7 +33,7 @@
                             Kurslar
                         </h2>
                         <span>
-                            10
+                            {{lengthAll.lesson}}
                         </span>
                     </div>
                     <router-link to="/Kurslar">
@@ -46,7 +46,7 @@
                             Rasmlar
                         </h2>
                         <span>
-                            10
+                            {{lengthAll.slaydImg}}
                         </span>
                     </div>
                     <router-link to="/Rasmlar">
@@ -59,7 +59,7 @@
                             Afzaliklar
                         </h2>
                         <span>
-                            10
+                            {{lengthAll.advantages}}
                         </span>
                     </div>
                     <router-link to="/Afzaliklar">
@@ -72,7 +72,7 @@
                             Bog`lanish
                         </h2>
                         <span>
-                            10
+                            {{lengthAll.contact}}
                         </span>
                     </div>
                     <router-link to="/Bog`lanish">
@@ -87,6 +87,8 @@
 <script setup>
 import SaidBar from '@/components/SaidBar.vue';
 import { useSidebarStore } from '@/stores/sidebar.js';
+import { reactive, onMounted } from 'vue'
+import axios from '@/services/axios'
 const sidebar = useSidebarStore();
     function burger() {
         sidebar.sidebar = !sidebar.sidebar
@@ -99,6 +101,74 @@ const sidebar = useSidebarStore();
         modal.classList.toggle('db');
         
     }
+
+    const lengthAll = reactive({
+    teacher: 0,
+    news: 0,
+    advantages: 0,
+    lesson: 0,
+    contact: 0,
+    slaydImg:0,
+})
+
+const getAll = () => {
+    axios
+        .get("/teachers/find-all", {
+
+        })
+        .then((res) => {
+            lengthAll.teacher = res.data.length
+        })
+        .catch((error) => {
+            console.log(error);
+        });
+
+    axios
+        .get("/advatages/find-all", {
+        })
+        .then((res) => {
+            lengthAll.advantages = res.data.length
+        })
+        .catch((error) => {
+            console.log(error);
+        });
+    axios
+        .get("/slayd-imges/find-all", {
+        })
+        .then((res) => {
+            lengthAll.slaydImg = res.data.length
+        })
+        .catch((error) => {
+            console.log(error);
+        });
+
+    axios
+        .get("/lessons/find-all", {
+        })
+        .then((res) => {
+            lengthAll.lesson = res.data.length
+        })
+        .catch((error) => {
+            console.log(error);
+        });
+
+    axios
+        .get("/contact/find-all", {
+            headers: {
+                Authorization: `Bearer ${localStorage.getItem("token")}`,
+            }
+        })
+        .then((res) => {
+            lengthAll.contact = res.data.length
+        })
+        .catch((error) => {
+            console.log(error);
+        });
+};
+
+onMounted(() => {
+    getAll();
+});
 </script>
     
 <style scoped>

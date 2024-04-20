@@ -36,20 +36,20 @@
                                 </td>
                             </tr>
                         </thead>
-                        <tbody>
+                        <tbody v-for="i in store.pagContactAll[store.pag]" :key="i.id">
                             <tr>
                                 <td>
                                     <h3>
-                                        John doe
+                                        {{i.name}}
                                     </h3>
                                 </td>
                                 <td>
                                     <h3>
-                                        970206868
+                                        {{ i.phone }}
                                     </h3>
                                 </td>
                                 <td>
-                                    <button class="delete">
+                                    <button @click="deleteContact(i.id)" class="delete">
                                         <svg class="delate" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em"
                                             viewBox="0 0 24 24">
                                             <path fill="currentColor"
@@ -64,7 +64,7 @@
             </div>
             <div class="Boglanish-footer">
                 <div class="footer-wrapper">
-                    <button>
+                    <button @click="store.pag == 0 ? store.pag = store.pagContactAll.length - 1  : store.pag -= 1">
                         <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
                             <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
                                 stroke-width="2" d="M5 12h14M5 12l6 6m-6-6l6-6" />
@@ -72,16 +72,16 @@
                     </button>
                     <div class="footer-content">
                         <span>
-                           1
+                           {{ store.pagContactAll.length == 0 ? store.pag : store.pag + 1 }}
                         </span>
                         <span>
                             /
                         </span>
                         <span>
-                            2
+                            {{ store.pagContactAll.length }}
                         </span>
                     </div>
-                    <button >
+                    <button @click="store.pag + 1 == store.pagContactAll.length ? store.pag = 0 : store.pag += 1">
                         <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 16 16">
                             <path fill="currentColor"
                                 d="M8.22 2.97a.75.75 0 0 1 1.06 0l4.25 4.25a.75.75 0 0 1 0 1.06l-4.25 4.25a.751.751 0 0 1-1.042-.018a.751.751 0 0 1-.018-1.042l2.97-2.97H3.75a.75.75 0 0 1 0-1.5h7.44L8.22 4.03a.75.75 0 0 1 0-1.06" />
@@ -94,7 +94,8 @@
     </template>
     <script setup>
         import SaidBar from '@/components/SaidBar.vue';
-        import { ref } from 'vue';
+        import {ref, onMounted, reactive } from "vue";
+        import axios from "@/services/axios";
         import { useSidebarStore } from '@/stores/sidebar.js';
         const modal = ref(false)
         const oppenModal = () => (modal.value = !modal.value)
@@ -113,6 +114,60 @@
             modal.classList.toggle('db');
             
         }
+
+        const store = reactive({
+    contactAll: false,
+    pagContactAll: [],
+    pag: 0,
+});
+
+const getAllContact = () => {
+    axios
+        .get("/contact/find-all", {
+            headers: {
+                Authorization: `Bearer ${localStorage.getItem("token")}`,
+            }
+        })
+        .then((res) => {
+            store.contactAll = res.data
+            store.contactAll = store.contactAll.reverse()
+            let contact = []
+            for (let i in store.contactAll) {
+                contact.push(store.contactAll[i])
+                if (contact.length == 4) {
+                    store.pagContactAll.push(contact)
+                    contact = []
+                }
+                if ((Number(i) + 1) == store.contactAll.length && (store.pagContactAll.length == 0 || contact.length > 0)) {
+                    store.pagContactAll.push(contact)
+                    contact = []
+                }
+            }
+        })
+        .catch((error) => {
+            store.error = true;
+        });
+};
+
+const deleteContact = (id) => {
+    axios
+        .delete(`/contact/delete/${id}`, {
+            headers: {
+                Authorization: `Bearer ${localStorage.getItem("token")}`,
+            },
+        })
+        .then((res) => {
+            getAllContact()
+            location.reload()
+        })
+        .catch((error) => {
+            console.log(error);
+        });
+}
+
+onMounted(() => {
+    getAllContact();
+});
     </script>
         
     <style scoped>
